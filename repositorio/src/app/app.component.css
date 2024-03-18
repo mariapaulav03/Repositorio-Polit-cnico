@@ -1,0 +1,28 @@
+.custom-card {
+    max-width: 400px;
+    margin: 0 auto; /* Para centrar horizontalmente */
+    margin-top: 100px; /* Ajusta según sea necesario para centrar verticalmente */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+  }
+
+  .mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .mat-card-content {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 20px;
+  }
