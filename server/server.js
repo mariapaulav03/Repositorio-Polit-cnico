@@ -23,8 +23,7 @@ const pool = new Pool({
     password: '12345678',
     port: 5433,
   });
-  
-  
+
 
   app.get('/', async (req, res) => {
     try {
