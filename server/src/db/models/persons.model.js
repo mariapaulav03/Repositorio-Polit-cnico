@@ -1,4 +1,4 @@
-const { Model, DataTypes, Sequelize } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 
 const PERSON_TABLE = 'persons';
 
@@ -23,7 +23,7 @@ const PersonSchema = {
     name: {
         allowNull: false,
         type: DataTypes.STRING,
-        field:'name'
+        field: 'name'
     },
     email: {
         allowNull: false,
@@ -36,14 +36,14 @@ const PersonSchema = {
         type: DataTypes.STRING,
         field: 'password'
     },
-    address:{
-        allowNull:false,
+    address: {
+        allowNull: false,
         type: DataTypes.STRING,
         field: 'address'
     },
-    phone:{
+    phone: {
         allowNull: true,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         field: 'phone'
     }
 }
