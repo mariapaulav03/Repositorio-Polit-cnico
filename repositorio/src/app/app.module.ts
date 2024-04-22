@@ -9,20 +9,26 @@ import { MatCardModule } from '@angular/material/card';
 
 
 import { AppComponent } from './app.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
