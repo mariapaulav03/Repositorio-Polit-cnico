@@ -54,16 +54,19 @@ $ ng serve
 ```
 
 
-## Support
+## Contribuciones
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+¡Las contribuciones son bienvenidas! Si deseas contribuir al desarrollo de este proyecto, por favor sigue estos pasos:
 
-## Stay in touch
+1. Crea un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit de ellos (`git commit -am 'Agrega nueva funcionalidad'`).
+4. Haz push de la rama (`git push origin feature/nueva-funcionalidad`).
+5. Crea un nuevo Pull Request.
+   
+## Contacto
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Para más información sobre este proyecto, puedes contactar al equipo de desarrollo en:
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Email: [mpvargas@poligran.edu.co](Paula:mpvargas@poligran.edu.co)
+- Sitio Web: [https://www.poli.edu.co/](https://www.poli.edu.co/)
