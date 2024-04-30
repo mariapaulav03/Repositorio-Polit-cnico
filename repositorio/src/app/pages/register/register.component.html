@@ -7,26 +7,41 @@
       <mat-form-field appearance="outline">
         <mat-label>Nombre</mat-label>
         <input matInput formControlName="name" placeholder="Nombre">
+        <mat-error *ngIf="myForm.controls['name'].invalid && (myForm.controls['name'].dirty || myForm.controls['name'].touched)">
+          Nombre es requerido
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Correo electrónico</mat-label>
         <input matInput formControlName="email" placeholder="Correo electrónico">
+        <mat-error *ngIf="myForm.controls['email'].invalid && (myForm.controls['email'].dirty || myForm.controls['email'].touched)">
+          Correo electrónico es requerido y debe ser válido
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Contraseña</mat-label>
         <input matInput formControlName="password" type="password" placeholder="Contraseña">
+        <mat-error *ngIf="myForm.controls['password'].invalid && (myForm.controls['password'].dirty || myForm.controls['password'].touched)">
+          Contraseña es requerida y debe tener al menos 6 caracteres
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Dirección</mat-label>
         <input matInput formControlName="address" placeholder="Dirección">
+        <mat-error *ngIf="myForm.controls['address'].invalid && (myForm.controls['address'].dirty || myForm.controls['address'].touched)">
+          Dirección es requerida
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Teléfono</mat-label>
         <input matInput formControlName="phone" placeholder="Teléfono">
+        <mat-error *ngIf="myForm.controls['phone'].invalid && (myForm.controls['phone'].dirty || myForm.controls['phone'].touched)">
+          Teléfono es requerido
+        </mat-error>
       </mat-form-field>
 
       <button mat-raised-button color="primary" type="submit">Enviar</button>

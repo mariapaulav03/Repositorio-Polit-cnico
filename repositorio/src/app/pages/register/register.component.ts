@@ -34,15 +34,17 @@ export class RegisterComponent {
       newPerson.password = formData.password;
       newPerson.address = formData.address;
       newPerson.phone = formData.phone;
-      console.log(newPerson);
       this.personsService.create(newPerson).subscribe(
         (result) => {
-          console.log(result);
           console.log('Registro exitoso:', result);
-
         },
         (error) => {
           console.error('Error al registrar:', error);
+          if (error.status === 409) {
+            console.error('El correo electrónico ya está registrado');
+          } else {
+            console.error('Ocurrió un error durante el registro');
+          }
         }
       );
     } else {
