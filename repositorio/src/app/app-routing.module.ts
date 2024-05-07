@@ -13,13 +13,17 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
     path: '',
-    redirectTo: '/register',
+    redirectTo: '/login',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: '/register',
+    redirectTo: '/login',
   },
 ];
 

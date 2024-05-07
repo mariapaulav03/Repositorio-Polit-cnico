@@ -1,10 +1,63 @@
 <div class="login-container">
-  <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
-    <h2>Iniciar sesión</h2>
-    <input type="email" formControlName="email" placeholder="Correo electrónico" required>
-    <input type="password" formControlName="password" placeholder="Contraseña" required>
-    <button type="submit">Iniciar sesión</button>
-
-  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-  </form>
+  <div class="login-form">
+    <form [formGroup]="loginForm">
+      <h2>Iniciar sesión</h2>
+      <mat-form-field
+      appearance="outline"
+      class="input-form-field"
+      hideRequiredMarker
+    >
+      <mat-label>Correo electrónico</mat-label>
+      <mat-icon class="form__field__left-icon" matPrefix> person</mat-icon>
+      <input
+        autocapitalize="none"
+        formControlName="email"
+        inputmode="email"
+        matInput
+        placeholder="usuario@gmail.com"
+        type="text"
+      />
+      <mat-error>El formato del correo es incorrecto</mat-error>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      class="input-form-field"
+      hideRequiredMarker
+    >
+      <mat-label>Contraseña</mat-label>
+      <mat-icon class="material-icons-outlined" matPrefix> lock</mat-icon>
+      <input
+        [type]="showPassword ? 'text' : 'password'"
+        formControlName="password"
+        matInput
+        placeholder="********"
+      />
+      <mat-icon
+        (click)="hideAndShowPassword()"
+        class="cursor-pointer material-icons-outlined"
+        matSuffix
+      >
+        {{ showPassword ? 'visibility_off' : 'visibility' }}
+      </mat-icon>
+      <mat-error>La contraseña es requerida</mat-error>
+    </mat-form-field>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </form>
+    <div class="recovery">
+      <p
+        class="recovery-text"
+      >
+        Recuperar contraseña
+      </p>
+    </div>
+    <button
+      (click)="onSubmit()"
+      [disabled]="this.loginForm.invalid"
+      class="button"
+      iwaitButtons="primary"
+      mat-button
+    >
+      Ingresar
+    </button>
+  </div>
 </div>
