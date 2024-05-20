@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Person } from 'src/app/model/person';
 import { PersonsService } from 'src/app/services/persons.service';
 
@@ -11,7 +12,7 @@ import { PersonsService } from 'src/app/services/persons.service';
 export class RegisterComponent {
   myForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private personsService: PersonsService) {
+  constructor(private fb: FormBuilder, private personsService: PersonsService, private router: Router) {
     this.builder();
   }
 
@@ -35,8 +36,9 @@ export class RegisterComponent {
       newPerson.address = formData.address;
       newPerson.phone = formData.phone;
       this.personsService.create(newPerson).subscribe(
-        (result) => {
+        async (result) => {
           console.log('Registro exitoso:', result);
+          await this.router.navigate(['/login']);
         },
         (error) => {
           console.error('Error al registrar:', error);
@@ -50,5 +52,8 @@ export class RegisterComponent {
     } else {
       console.log('Formulario inválido');
     }
+  }
+  async back() {
+    await this.router.navigate(['/login']);
   }
 }

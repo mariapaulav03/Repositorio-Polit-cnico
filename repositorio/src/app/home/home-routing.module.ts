@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { UsersComponent } from './users/users.component';
+import { UpdateComponent } from './users/update/update.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
     children: [
       {
         path: 'users',
-        component: UsersComponent
+        loadChildren: () =>
+          import('./users/users.module').then((m) => m.UsersModule),
       },
       {
         path: '',
@@ -24,6 +26,7 @@ const routes: Routes = [
     ],
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

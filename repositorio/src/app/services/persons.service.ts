@@ -32,7 +32,7 @@ export class PersonsService {
     );
   }
 
-  get(id: string): Observable<Person> {
+  get(id: number): Observable<Person> {
     return this.http.get<Person>(`${baseUrl}/${id}`).pipe(
       catchError(this.handleError)
     );
@@ -44,13 +44,13 @@ export class PersonsService {
     );
   }
 
-  update(id: string, data: Person): Observable<Person> {
+  update(id: number, data: Person): Observable<Person> {
     return this.http.put<Person>(`${baseUrl}/${id}`, data).pipe(
       catchError(this.handleError)
     );
   }
 
-  delete(id: string): Observable<any> {
+  delete(id: number): Observable<any> {
     return this.http.delete(`${baseUrl}/${id}`).pipe(
       catchError(this.handleError)
     );

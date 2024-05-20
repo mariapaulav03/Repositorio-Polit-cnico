@@ -90,7 +90,13 @@
   font-size: 14px;
 }
 
-.recovery-text {
+.actions{
+  display: flex;
+  justify-content: space-between;
   color: #1FB2DE;
   float: right;
+  width: 100%;
+  .register {
+    cursor: pointer;
+  }
 }

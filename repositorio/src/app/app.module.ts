@@ -13,7 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
-import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [

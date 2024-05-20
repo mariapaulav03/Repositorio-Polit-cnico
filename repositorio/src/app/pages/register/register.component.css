@@ -1,28 +1,77 @@
 .custom-card {
-    max-width: 400px;
-    margin: 0 auto; /* Para centrar horizontalmente */
-    margin-top: 100px; /* Ajusta según sea necesario para centrar verticalmente */
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Agrega sombra */
-  }
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative;
+}
 
-  .mat-card-title {
-    font-size: 24px;
-    font-weight: bold;
-  }
 
-  .mat-card-content {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
+.mat-card-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #193459;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
 
-  .mat-form-field {
-    width: 100%;
-  }
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  button {
-    margin-top: 20px;
-  }
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button {
+  width: 48%;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
+  font-family: 'Open Sans', sans-serif;
+  background-color: #193459;
+  color: #fff;
+  font-size: 14px;
+}
+
+.button[color="warn"] {
+  background-color: #dc3545;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button[color="warn"]:hover {
+  background-color: #c82333;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  border-radius: 12px;
+  background: #EFF2F6;
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label,
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  display: block;
+  color: #898989;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  color: #898989;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}

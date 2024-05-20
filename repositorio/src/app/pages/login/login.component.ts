@@ -9,7 +9,6 @@ import { PersonsService } from 'src/app/services/persons.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
   loginForm: FormGroup;
   errorMessage: string = '';
   showPassword = false;
@@ -32,7 +31,7 @@ export class LoginComponent {
       const { email, password } = this.loginForm.value;
       this.personsService.login({ email, password }).subscribe(
         async (response) => {
-          await this.router.navigate(['/home']);
+          await this.router.navigate(['/home/users']);
           console.log(response);
         },
         (error) => {
@@ -50,5 +49,9 @@ export class LoginComponent {
         }
       );
     }
+  }
+
+  async goToRegister() {
+    await this.router.navigate(['/register']);
   }
 }
